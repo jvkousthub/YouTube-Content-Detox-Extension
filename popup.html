@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Feed Detoxify</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    #keywords {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    .control-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    #save-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #status {
+      margin-top: 10px;
+      text-align: center;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h2>YouTube Feed Detoxify</h2>
+  <textarea id="keywords" placeholder="Enter keywords (one per line)"></textarea>
+  
+  <div class="control-group">
+    <label>Filter Mode:</label>
+    <select id="filter-mode">
+      <option value="hide">Hide Keywords</option>
+      <option value="show">Show Only Keywords</option>
+    </select>
+  </div>
+  
+  <button id="save-btn">Save Keywords</button>
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
