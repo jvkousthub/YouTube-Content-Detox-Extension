@@ -9,14 +9,12 @@ YouTube Content Detox is a browser extension designed to let users take control 
 - **User-Friendly Interface**: Configure filters effortlessly through the extension's popup menu.
 
 ## Installation
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/jvkousthub/YouTube-Content-Detox-Extension.git
-   ```
-2. Open your browser's extension management page:
+1. Download the ZIP file of this repository by clicking the **Code** button, then **Download ZIP**.
+2. Extract the ZIP file to a folder on your computer.
+3. Open your browser's extension management page:
    - **For Chrome**: Navigate to `chrome://extensions/`
-3. Enable "Developer mode" (for Chrome).
-4. Click **"Load unpacked"** and select the cloned repository folder.
+4. Enable "Developer mode" (for Chrome).
+5. Click **"Load unpacked"** and select the extracted folder.
 
 ## Usage
 1. Open YouTube.
@@ -31,6 +29,3 @@ YouTube Content Detox is a browser extension designed to let users take control 
 
 
 ---
-```
-
-Feel free to replace `[your-email@example.com]` with your actual email if you'd like to provide contact details. This README provides users with clear instructions on how to install and use the extension, along with an overview of its features and functionality.
