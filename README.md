@@ -28,4 +28,7 @@ YouTube Content Detox is a browser extension designed to let users take control 
 - Videos matching the keywords are dynamically hidden without affecting your YouTube account or recommendations.
 
 
+
+Mozilla AddOn published: 
+https://addons.mozilla.org/addon/youtube-content-detox/
 ---
