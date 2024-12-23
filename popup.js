@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   const keywordsTextarea = document.getElementById('keywords');
   const filterModeSelect = document.getElementById('filter-mode');
-  const saveButton = document.getElementById('save-btn');
-  const statusDiv = document.getElementById('status');
+  const savebtn = document.getElementById('save-btn');
+  const statusdiv = document.getElementById('status');
 
   chrome.storage.sync.get(['detoxifyKeywords', 'filterMode'], function(result) {
     if (result.detoxifyKeywords) {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  saveButton.addEventListener('click', function() {
+  savebtn.addEventListener('click', function() {
     const keywords = keywordsTextarea.value
       .split('\n')
       .map(keyword => keyword.trim())
@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
       detoxifyKeywords: keywords,
       filterMode: filterMode
     }, function() {
-      statusDiv.textContent = 'Keywords and mode saved successfully!';
-      setTimeout(() => { statusDiv.textContent = ''; }, 2000);
+      statusdiv.textContent = 'Keywords and mode saved successfully!';
+      setTimeout(() => { statusdiv.textContent = ''; }, 2000);
 
       try {
         chrome.runtime.sendMessage({action: 'filterVideos'}, (response) => {

@@ -13,47 +13,47 @@
         
         if (keywords.length === 0) return;
 
-        const videoSelectors = [
+        const vidsele = [
           'ytd-rich-item-renderer',
           'ytd-video-renderer',
           'ytd-grid-video-renderer'
         ];
 
-        videoSelectors.forEach(selector => {
-          const videoElements = document.querySelectorAll(selector);
+        vidsele.forEach(selector => {
+          const videlems = document.querySelectorAll(selector);
           
-          videoElements.forEach(videoElement => {
-            const titleElements = [
-              videoElement.querySelector('#video-title'),
-              videoElement.querySelector('.title'),
-              videoElement.querySelector('a[title]')
+          videlems.forEach(videlem => {
+            const titleelems = [
+              videlem.querySelector('#video-title'),
+              videlem.querySelector('.title'),
+              videlem.querySelector('a[title]')
             ];
 
-            const titleElement = titleElements.find(el => el);
+            const titlee = titleelems.find(el => el);
             
-            if (!titleElement) return;
+            if (!titlee) return;
 
-            const title = titleElement.textContent.toLowerCase();
+            const title = titlee.textContent.toLowerCase();
 
-            const matchesKeywords = keywords.some(keyword => 
+            const matches = keywords.some(keyword => 
               title.includes(keyword.toLowerCase())
             );
 
             if (filterMode === 'hide') {
-              if (matchesKeywords) {
-                videoElement.style.display = 'none';
-                videoElement.setAttribute('hidden', 'true');
+              if (matches) {
+                videlem.style.display = 'none';
+                videlem.setAttribute('hidden', 'true');
               } else {
-                videoElement.style.display = '';
-                videoElement.removeAttribute('hidden');
+                videlem.style.display = '';
+                videlem.removeAttribute('hidden');
               }
             } else if (filterMode === 'show') {
-              if (matchesKeywords) {
-                videoElement.style.display = '';
-                videoElement.removeAttribute('hidden');
+              if (matches) {
+                videlem.style.display = '';
+                videlem.removeAttribute('hidden');
               } else {
-                videoElement.style.display = 'none';
-                videoElement.setAttribute('hidden', 'true');
+                videlem.style.display = 'none';
+                videlem.setAttribute('hidden', 'true');
               }
             }
           });
